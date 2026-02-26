@@ -8,15 +8,16 @@
 
 ## Environment setup
 
-| Package      | Version |
-| ------------ | ------- |
-| python       | 3.8.10  |
-| numpy        | 1.24.4  |
-| scipy        | 1.10.1  |
-| scikit-learn | 1.0.2   |
-| scikit-image | 0.21.0  |
-
-It will be updated later on...
+| Package      | Version      |
+| ------------ | ------------ |
+| python       | 3.8.10       |
+| numpy        | 1.24.4       |
+| scipy        | 1.10.1       |
+| scikit-learn | 1.0.2        |
+| scikit-image | 0.21.0       |
+| matplotlib   | 3.7.5        |
+| PyTorch      | 2.2.2+cu121  |
+| torchvision  | 0.17.2+cu121 |
 
 ## Reference
 
