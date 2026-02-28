@@ -4,12 +4,18 @@
 
 - [x] 1.  **Reproduce(_done_):** This project is going to re implement the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
 - [x] 2. **Limitation(_done_):** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments.
-- [ ] 3. **Improvement(_in progress_):** Please check **3.1 section** in `lime_budget_constraints.ipynb`, and pick an improvement you're interested in. Improvement 2.2 and 3 are recommended. 
+- [ ] 3. **Improvement(_in progress_):**
+- Please check **section 3.1** in `lime_budget_constraints.ipynb`, and pick one improvement you're interested in.
+- Recommended options are `2.2 Repeated LIME with Split Budget and Aggregation` and `3. Balanced Mask Sampling`. 
+- **_Please also check section 2.3 to understand how to use `budget_sweep_metrics()` function._** You need to do Budget Sweep Metrics Experiemtns to measure the performance of your improvement. And save your resuslts in `./results` file.
+- Budgets Setting: `budgets = [200, 500, 1000, 2000, 3000, 5000]`
      | Name | Current Task |
      | ------------ | ------------ |
      | Qihang Feng | Prepare presentation and report |
      | Wonki Byun | Improvement x.x |
-     | Zixi Chai | Improvement x.x |
+     | Zixi Chai | Improvement x.x |  
+
+     Advice from TA: It's ok if the improvement does't improve the performance, and we can try to find why it does't work.
 
 ## Environment setup
 
