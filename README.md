@@ -2,10 +2,14 @@
 
 ## Work Plan
 
- - [x] 1. **Reproduce(*done*):** This project is going to re implement the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
-- [x] 2. **Limitation(*done*):** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments.
-- [ ] 3. **Improvement(*in progress*):** Please check **3.1 section** in `lime_budget_constraints.ipynb`.
-
+- [x] 1.  **Reproduce(_done_):** This project is going to re implement the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
+- [x] 2. **Limitation(_done_):** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments.
+- [ ] 3. **Improvement(_in progress_):** Please check **3.1 section** in `lime_budget_constraints.ipynb`, and pick an improvement you're interested in. Improvement 2.2 and 3 are recommended. 
+     | Name | Current Task |
+     | ------------ | ------------ |
+     | Qihang Feng | Prepare presentation and report |
+     | Wonki Byun | Improvement x.x |
+     | Zixi Chai | Improvement x.x |
 
 ## Environment setup
 
