@@ -2,9 +2,10 @@
 
 ## Work Plan
 
-1. **Reproduce:** This project is going to re implement the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
-2. **Limitation:** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments.
-3. **Improvement:** We will propose lightweight methods under limited budget to improve stability without increasing the number of model queries.
+ - [x] 1. **Reproduce(*done*):** This project is going to re implement the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
+- [x] 2. **Limitation(*done*):** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments.
+- [ ] 3. **Improvement(*in progress*):** Please check **3.1 section** in `lime_budget_constraints.ipynb`.
+
 
 ## Environment setup
 
