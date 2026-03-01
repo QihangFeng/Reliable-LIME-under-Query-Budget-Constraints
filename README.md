@@ -3,7 +3,7 @@
 ## Work Plan
 
 - [x] 1.  **Reproduce(_done_):** This project is going to re implement the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
-- [x] 2. **Limitation(_done_):** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments.
+- [x] 2. **Limitation(_done_):** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments with numerical metrics.
 - [ ] 3. **Improvement(_in progress_):**
 - Budgets Setting: `budgets = [200, 500, 1000, 2000, 3000, 5000]`
 - Check resuslts in section `3.2 Coarse-to-Fine Budget Allocation`. Compared with vanilla, the most primary metric `faith_drop_k_mean` is largely improved! However, there're two metrics get worse.
