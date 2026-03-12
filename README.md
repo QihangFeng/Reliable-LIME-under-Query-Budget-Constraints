@@ -1,27 +1,24 @@
 # Reliable LIME under Query Budget Constraints
 
-## Work Plan
+## What we have done
 
-- [x] 1.  **Reproduce(_done_):** This project is going to re implement the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
-- [x] 2. **Limitation(_done_):** We will show that Image LIME becomes less reliable under limited query budgets by budget sweep experiments with numerical metrics.
-- [ ] 3. **Improvement(_in progress_):**
-- Budgets Setting: `budgets = [200, 500, 1000, 2000, 3000, 5000]`
-- Check resuslts in section `3.2 Coarse-to-Fine Budget Allocation`. Compared with vanilla, the most primary metric `faith_drop_k_mean` is largely improved! However, there're two metrics get worse.
-     - `stability_jaccard`: It's worse but still increases generally as budget growing.
-     - `fidelity_wmse_mean`: It's very much worse, and it even increases as budget gowing!  
-     Possible reasons: `fidelity_wmse_mean` may be unfair for Coarse-to-fine Budget Allocation. Or, the two stages fitting makes the training pairs of explainer largely unlinear.
+- [x] 1.  **Reproduce(_done_):** This project re implemented the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
+- [x] 2. **Limitation(_done_):** We showed that Image LIME becomes less reliable under limited query budgets by budget sweep experiments with numerical metrics.
+- [x] 3. **Improvement(_done_):** We defined four metrics, built budegt sweep experiment pipeline and impelement the coarse to fine budget allocation strategy.
 
-     Please select a metric that you want to study, find why it becomes worse, and try to fix it if it's possible.
-     You can find definitions of these metrics in section `2.2 Numerical metrics`.  
-     
+## Current work plan
 
-     | Name | Current Task |
-     | ------------ | ------------ |
-     | Qihang Feng | Prepare presentation and report |
-     | Wonki Byun |  |
-     | Zixi Chai |  |  
+Now, we are preparing the presentation and the final report.
+| Task | DDL |
+| ------------ | ------------ |
+| Presentation | April 2 |  
+| Report | April 27 |
 
-     Advice from TA: It's ok if the improvement does't improve the performance, and we can try to find why it does't work.
+| Name | Current Task |
+| ------------ | ------------ |
+| Qihang Feng | 1, 3 |
+| Wonki Byun | 2, `fidelity_wmse_mean` discussion in 4.3 |
+| Zixi Chai | 4, 5 |
 
 ## Environment setup
 
