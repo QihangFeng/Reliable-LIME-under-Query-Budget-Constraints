@@ -12,7 +12,7 @@ Now, we are preparing the presentation and the final report.
 | Task | DDL |
 | ------------ | ------------ |
 | Presentation | April 2 |  
-| Report | April 27 |
+| Report | April 26 |
 
 | Name | Current Task |
 | ------------ | ------------ |
