@@ -32,7 +32,7 @@ To install the required packages, please run:
 
 ## How to reproduce
 1. For implementation details, please check the `coarse2fine_LIME.ipynb` notebook, which contains the experiment pipeline and step by step instructions.
-2. For the technical report and presentation material, please check the `./presentation&report` folder.
+2. For the technical report and presentation material, please check the `./report` folder.
 
 ## Reference
 
