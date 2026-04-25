@@ -1,26 +1,19 @@
 # Reliable LIME under Query Budget Constraints
 
-## What we have done
+This project studies the reliability of LIME image explanations under limited query budgets. While the original [LIME](https://arxiv.org/abs/1602.04938) paper mainly presents qualitative image examples, this project builds a quantitative evaluation pipeline for `lime_image` and investigates how explanation quality changes as the query budget decreases.  
 
-- [x] 1.  **Reproduce(_done_):** This project re implemented the core pipeline of `lime_image`, which is the flagship demo in [original paper](https://arxiv.org/pdf/1602.04938).
-- [x] 2. **Limitation(_done_):** We showed that Image LIME becomes less reliable under limited query budgets by budget sweep experiments with numerical metrics.
-- [x] 3. **Improvement(_done_):** We defined four metrics, built budegt sweep experiment pipeline and impelement the coarse to fine budget allocation strategy.
+Additionally, we propose a coarse-to-fine budget allocation strategy to improve explanation effectiveness under limited query budgets. When the query budget is large enough, our method may perform similarly to vanilla LIME. However, under smaller budgets, our method can identify meaningful image regions earlier, making LIME more practical for real-world settings where model queries may be costly or limited.  
 
-## Current work plan
+## Qualitative Example  
+Based on human visual prior knowledge, the eye and facial regions are semantically meaningful cues for recognizing cats. In the vanilla LIME result, the explanation starts to clearly highlight the eye region around a query budget of 2000. In contrast, our coarse-to-fine method highlights the eye region at a much lower budget, around 500 queries. This suggests that our method can identify meaningful image regions earlier under limited query budgets.  
 
-Now, we are preparing the presentation and the final report.
-| Task | DDL |
-| ------------ | ------------ |
-| Presentation | April 2 |  
-| Report | April 26 |
-
-| Name | Current Task |
-| ------------ | ------------ |
-| Qihang Feng | 1, 3 |
-| Wonki Byun | 2, `fidelity_wmse_mean` discussion in 4.3 |
-| Zixi Chai | 4, 5 |
+**Vanilla LIME**  
+![vanilla_plot_200to5000](./results/vanilla_plot_200to5000.png)  
+**Coarse-to-Fine LIME**
+![coarse2fine_plot_200to5000](./results/coarse2fine_plot_200to5000.png)
 
 ## Environment setup
+This project was developed and tested on **Windows 11** and  **[Python 3.8.10](https://www.python.org/downloads/release/python-3810/)**.
 
 | Package      | Version      |
 | ------------ | ------------ |
@@ -31,7 +24,15 @@ Now, we are preparing the presentation and the final report.
 | scikit-image | 0.21.0       |
 | matplotlib   | 3.7.5        |
 | PyTorch      | 2.2.2+cu121  |
-| torchvision  | 0.17.2+cu121 |
+| torchvision  | 0.17.2+cu121 |  
+
+To install the required packages, please run:  
+`pip install -r requirements.txt`  
+**Note:** The `requirements.txt` file was generated from the original development environment. Some platform-specific packages may not be required on other systems. If PyTorch installation fails, please install PyTorch manually from the official [PyTorch](https://pytorch.org/) website based on your system.  
+
+## How to reproduce
+1. For implementation details, please check the `coarse2fine_LIME.ipynb` notebook, which contains the experiment pipeline and step by step instructions.
+2. For the technical report and presentation material, please check the `./presentation&report` folder.
 
 ## Reference
 
