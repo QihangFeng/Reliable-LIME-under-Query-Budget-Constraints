@@ -2,6 +2,9 @@
 assignment/
 val_env.ipynb
 
+# Generated experiment runs; published result figures and tables remain tracked.
+results/runs/
+
 # Wonki Byun
 
 # Zixi Chai
