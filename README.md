@@ -26,9 +26,16 @@ This project was developed and tested on **Windows 11** and  **[Python 3.8.10](h
 | PyTorch      | 2.2.2+cu121  |
 | torchvision  | 0.17.2+cu121 |  
 
-To install the required packages, please run:  
-`pip install -r requirements.txt`  
-**Note:** The `requirements.txt` file was generated from the original development environment. Some platform-specific packages may not be required on other systems. If PyTorch installation fails, please install PyTorch manually from the official [PyTorch](https://pytorch.org/) website based on your system.  
+With the Python 3.8.10 virtual environment activated, install the required packages:
+
+```powershell
+python -m pip install --upgrade "pip<25.1"
+python -m pip install -r requirements.txt
+```
+
+`pip<25.1` keeps pip compatible with Python 3.8. The requirements file includes the official PyTorch CUDA 12.1 package index so pip can find the pinned `torch==2.2.2+cu121` and `torchvision==0.17.2+cu121` builds.
+
+**Note:** The `requirements.txt` file was generated from the original Windows development environment. Some platform-specific packages may not be required on other systems. The pinned CUDA builds require a compatible NVIDIA GPU and driver for GPU acceleration; see the official [PyTorch 2.2.2 installation instructions](https://pytorch.org/get-started/previous-versions/#v222) for other configurations.
 
 ## How to reproduce
 1. For implementation details, please check the `coarse2fine_LIME.ipynb` notebook, which contains the experiment pipeline and step by step instructions.
